@@ -7,7 +7,7 @@ import tkinter as tk
 from tkinter import filedialog
 import google.generativeai as genai
 # Load models
-model = joblib.load('rf_model_all_targets.pkl')
+mlmodel = joblib.load('rf_model_all_targets.pkl')
 random_forest_model = joblib.load('trained_models/random_forest_model.joblib')
 linear_reg_model = joblib.load('trained_models/linear_regression_model.joblib')
 def upload_csv():
@@ -56,24 +56,20 @@ feature_names = [
 def predict(input_data):
     reshaped_input = np.array(list(input_data.values())).reshape(1, -1)
     
-    prediction = model.predict(reshaped_input)
+    prediction = mlmodel.predict(reshaped_input)
     return prediction
 
 
-# Function to make predictions for the first model
-def predict(input_data):
-    reshaped_input = np.array(list(input_data.values())).reshape(1, -1)
-    prediction = model.predict(reshaped_input)
-    return prediction
+# # Function to make predictions for the first model
+# def predict(input_data):
+#     reshaped_input = np.array(list(input_data.values())).reshape(1, -1)
+#     prediction = model.predict(reshaped_input)
+#     return prediction
 
 # UI begins here
 # Display image at the top
-image = Image.open("top 3 performer.png")  # Replace with your image path
-st.image(image, caption="Top 3 performers", use_column_width=True)
-image1 = Image.open("low performer.png") 
-st.image(image1, caption="Low 3 performers", use_column_width=True)
-# Navigation bar
-menu = st.sidebar.radio("Navigation", ["Stock Price Prediction","Company Performance Prediction","More Analysis","Upload and Analyze Data"])
+
+menu = st.sidebar.radio("Navigation", ['overview',"Stock Price Prediction","Company Performance Prediction","More Analysis","Upload and Analyze Data"])
 
 if menu == "Company Performance Prediction":
     st.title("Company Performance Prediction")
@@ -175,6 +171,11 @@ elif menu == "More Analysis":
     image1 = Image.open("most_profitable_companies.png") 
     st.image(image1, caption="Most profitable companies", use_column_width=True)
     image1 = Image.open("overall_trends.png") 
+    image = Image.open("top 3 performer.png")  # Replace with your image path
+    st.image(image, caption="Top 3 performers", use_column_width=True)
+    image1 = Image.open("low performer.png") 
+    st.image(image1, caption="Low 3 performers", use_column_width=True)
+    # Navigation bar
     st.image(image1, caption="Overall trend", use_column_width=True)
     image1 = Image.open("declining_net_income.png") 
     st.image(image1, caption="Declining net Income", use_column_width=True)
@@ -190,8 +191,7 @@ elif menu == "Upload and Analyze Data":
 
         # Context for Generative AI
         context = f"""
-        You are the Finance Head of a company. I have provided a dataset below that contains financial data, including revenue, expenses, profit margins, operational costs, and other relevant metrics. Your task is to analyze this data and provide insights and recommendations.
-
+        You are the Finance Head of a company. I have provided a dataset below that contains financial data, including revenue, expenses, profit margins, operational costs, and other relevant metrics. Your task is to analyze this data and provide insights and recommendations. and give me concise data
         ### Dataset:
         {data_string}
         """
@@ -207,7 +207,7 @@ elif menu == "Upload and Analyze Data":
         # follow_up_response = model.generate_content([query])
         # st.subheader("Top 3 Companies with High Profits:")
         # st.write(follow_up_response.text)
-        user_question = st.text_input("Ask a financial question about the dataset (e.g., 'Top 3 companies to invest in')")
+        user_question = st.text_input("Ask a financial question about the dataset")
         
         if user_question:
             query = f"{context}\n\n### Question: {user_question}"
@@ -216,3 +216,10 @@ elif menu == "Upload and Analyze Data":
             st.write(follow_up_response.text)
     else:
         st.info("Please upload a CSV file to proceed.")
+
+elif menu == "overview":
+    image = Image.open("top 3 performer.png")  # Replace with your image path
+    st.image(image, caption="Top 3 performers", use_column_width=True)
+    image1 = Image.open("low performer.png") 
+    st.image(image1, caption="Low 3 performers", use_column_width=True)
+    # Navigation bar

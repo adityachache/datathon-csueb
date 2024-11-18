@@ -1,92 +1,90 @@
-Stock Spectrum: AI-Assisted Business Valuation Tool
-Project Overview:
+# Stock Spectrum: AI-Assisted Business Valuation Tool
 
-Stock Spectrum is a project developed during the college hackathon Datathon 1.0 by our team, where we chose the finance track to create an intuitive tool for understanding and analyzing stock data. Our objective was to provide a user-friendly solution that simplifies the complex world of company stocks, leveraging AI and machine learning to provide actionable insights for both financial experts and non-experts alike.
+Stock Spectrum is a cutting-edge solution designed to simplify the analysis of company stocks and performance metrics. This project was developed during **Datathon 1.0** for the **Finance Track**, where we aimed to make financial data accessible and understandable to users from diverse backgrounds.
 
-Description:
-The finance track focused on leveraging financial and market data to build AI-assisted tools for business valuation. The dataset we worked with included U.S. companies' Ticker IDs and Standard Industrial Classification (SIC) codes, alongside their descriptions.
+---
 
-Objective:
-Data Source: The project utilized publicly available datasets, primarily containing SIC codes and Ticker IDs.
-Goal:
-To design interactive dashboards and tools that allow users to easily perform data aggregation, financial analysis, and business valuation.
-Our solution aimed to simplify complex financial concepts for non-experts, providing clear and actionable insights about company stock performance and market trends.
-Key Features:
-1. Data Gathering & Consolidation
-We started with limited data (SIC codes and Ticker IDs) and collected additional information from:
-Historical Stock Data: Public data repositories.
-Yahoo Finance API: For company-specific financial details and stock performance.
-2. Machine Learning Models
-We trained predictive models to forecast:
-Stock Prices for the next day.
-Company Performance Metrics using models such as:
-Linear Regression
-Random Forest Regressor
-3. AI-Assisted Insights
-Integrated Google Gemini LLM to offer AI-driven insights. Users can upload CSV files (up to 200MB) and receive detailed analysis and actionable feedback from the model.
-4. Interactive Visualizations
-Used Tableau to create interactive visualizations for better understanding of stock performance, trends, and predictions.
-5. Web Application Interface
-Developed a Streamlit-based UI that provides an intuitive, user-friendly interface to interact with the data and AI insights.
-Technology Stack:
-Streamlit: For building the web application interface.
-Python: For data analysis, machine learning model development, and API integration.
-Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
-Tableau: For creating interactive visualizations and dashboards.
-Google Gemini API: For providing AI-assisted insights and analysis.
-How It Works:
-Upload CSV: Users can upload a CSV file containing company data, and the system will analyze it.
-Data Analysis: Python scripts process and analyze the data, applying machine learning models for stock price prediction and performance metrics.
-Visualization: The processed data is displayed through interactive Tableau dashboards.
-AI Insights: The system offers insights powered by Google Gemini, helping users understand the data in an easy-to-digest format.
-Challenges Faced:
-Data Gathering & Consolidation: We faced the challenge of collecting and consolidating the necessary stock and company data. However, using public repositories and the Yahoo Finance API, we were able to gather comprehensive data to build our solution.
-Model Training: Training accurate predictive models on historical stock data is inherently difficult due to market volatility, but we employed regression techniques and evaluated the models based on their performance.
-Future Improvements:
-Model Enhancement: Explore more advanced machine learning techniques like LSTM for stock price predictions.
-User Experience: Improve the user interface for better interaction and customization options.
-Data Sources: Expand to include more diverse datasets such as real-time stock prices, market news, and social media sentiment analysis.
-Getting Started:
-Prerequisites:
-Python (>= 3.8)
-Libraries:
-Streamlit
-Pandas
-NumPy
-Scikit-learn
-Matplotlib
-Seaborn
-Tableau (for visualizations)
-Google Gemini API (for AI-powered insights)
-Installation:
-Clone the repository:
+## 📋 Project Overview
 
-bash
-Copy code
-git clone https://github.com/your-repo/stock-spectrum.git
-cd stock-spectrum
-Install dependencies:
+The **Finance Track** at Datathon 1.0 challenged participants to leverage financial and market data to create intuitive, AI-assisted valuation tools. Given only the dataset of **SIC codes** and **Ticker IDs**, our team collected and consolidated additional data to build **Stock Spectrum**, a user-friendly web application for analyzing financial data, visualizing trends, and predicting stock prices.
 
-bash
-Copy code
-pip install -r requirements.txt
-Run the Streamlit app:
+---
 
-bash
-Copy code
-streamlit run ui.py
+## 🚀 Key Features
 
-Contributors:
-[Nuzhat Fatima]: 
-[Praveen Bhandari]: 
-[Navdeep Singh]: 
-[Aditya Chache]: 
+1. **Interactive Visualizations**  
+   - Built using **Tableau**, our visualizations enable users to explore stock trends and performance metrics seamlessly.
+   
+2. **Stock Price Prediction**  
+   - Utilized machine learning models like **Linear Regression** and **Random Forest Regressor** to predict next-day stock prices and performance metrics.
 
-Acknowledgments:
-Datathon 1.0 for organizing the hackathon and providing the opportunity to develop this solution.
-Yahoo Finance API for stock and financial data.
-Google Gemini for powerful AI insights.
+3. **AI-Assisted Insights**  
+   - Integrated **Google Gemini LLM**, allowing users to upload datasets (up to 200MB) and receive AI-driven insights for deeper analysis.
 
-License:
-This project is licensed under the MIT License - see the LICENSE file for details.
+4. **User-Friendly Web Interface**  
+   - Developed a sleek, interactive interface using **Streamlit** for effortless navigation and interaction.
 
+---
+
+## ⚙️ How It Works
+
+1. **Data Collection & Preparation**:  
+   - Gathered historical stock data from public repositories.
+   - Enriched stock information using **Yahoo Finance API**.
+
+2. **Data Visualization**:  
+   - Created dynamic dashboards with **Tableau** to display key financial metrics.
+
+3. **Machine Learning**:  
+   - Trained models to predict stock prices and company performance.
+
+4. **AI Analysis**:  
+   - Leveraged **Google Gemini API** for generating AI insights on uploaded datasets.
+
+---
+
+## 🛠️ Technologies Used
+
+- **Streamlit**: Interactive web application development.
+- **Python**: Data analysis, data preprocessing, and machine learning.
+- **Tableau**: Creation of interactive data visualizations.
+- **Google Gemini API**: LLM integration for AI insights.
+- **Yahoo Finance API**: Data enrichment for stock and company details.
+
+---
+
+## 🌟 Challenges Faced
+
+- **Data Consolidation**:  
+  Combining datasets from different sources while ensuring accuracy and consistency.
+
+- **Model Optimization**:  
+  Balancing simplicity and accuracy in our machine learning models.
+
+- **AI Integration**:  
+  Seamlessly embedding LLM capabilities into the web app for robust insights.
+
+---
+
+## 📊 Visualizations
+
+Our visualizations include:  
+- Volume of stocks traded over the last five years.  
+- Performance of top and low-performing companies.  
+- Predicted vs. actual stock prices.  
+
+Check out the visualizations on [Tableau Public](https://public.tableau.com/views/datathon_vizzes/Sheet7?:language=en-US&:display_count=n&:origin=viz_share_link).
+
+---
+
+## 💡 Future Scope
+
+- Enhance prediction accuracy using more complex models.  
+- Expand datasets to include international stock data.  
+- Implement additional AI capabilities for real-time financial analysis.
+
+---
+
+## ✨ Try It Out!
+
+Stock Spectrum is designed to help anyone—from beginners to financial experts—make sense of complex stock data with ease. Explore our visualizations, interact with predictions, and gain AI-assisted insights today!

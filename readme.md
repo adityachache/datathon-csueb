@@ -88,3 +88,14 @@ Check out the visualizations on [Tableau Public](https://public.tableau.com/view
 ## ✨ Try It Out!
 
 Stock Spectrum is designed to help anyone—from beginners to financial experts—make sense of complex stock data with ease. Explore our visualizations, interact with predictions, and gain AI-assisted insights today!
+
+
+## 👥 Contributors
+
+- **[Praveen Bhandari](https://www.linkedin.com/in/praveen-bhandari-9a9b60169/)**  
+
+- **[Nuzhat Fatima](https://www.linkedin.com/in/nuzhat-fatima/)**  
+
+- **[Navdeep Singh](https://www.linkedin.com/in/navdeep-singh-398494b3/)**  
+
+- **[Aditya Chache](https://www.linkedin.com/in/aditya-chache-2647091a7/)**  

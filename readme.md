@@ -4,6 +4,10 @@ Stock Spectrum is a cutting-edge solution designed to simplify the analysis of c
 
 ---
 
+### View the demo here - https://youtu.be/O8KBiRDAmlo?si=EqFSOwb2_qC9fS1s
+
+---
+
 ## 📋 Project Overview
 
 The **Finance Track** at Datathon 1.0 challenged participants to leverage financial and market data to create intuitive, AI-assisted valuation tools. Given only the dataset of **SIC codes** and **Ticker IDs**, our team collected and consolidated additional data to build **Stock Spectrum**, a user-friendly web application for analyzing financial data, visualizing trends, and predicting stock prices.
